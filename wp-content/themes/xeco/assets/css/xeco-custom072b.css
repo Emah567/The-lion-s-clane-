@@ -1,0 +1,82 @@
+/* Search results  CSS */
+.search-results .blog-standard-post.type-product {
+    max-width: 800px;
+}
+.search-results .blog-standard-post.type-product .blog-content:not(.blog-details-content) .post-text {
+    margin: 0 0;
+}
+.search-results .blog-standard-post.type-product .blog-content .post-text p {
+    margin: 0 0;
+}
+.search-results .blog-standard-post.type-product .blog-content .title {
+    margin-bottom: 15px;
+}
+.mc4wp-alert {
+    margin: 20px 0 0;
+    text-align: center;
+}
+.mc4wp-alert p {
+    margin: 0 0;
+}
+.mc4wp-success p {
+    color: green;
+}
+
+/* Elementor Custom CSS */
+.xeco-menu-not-showing {
+    padding: 25px 0 !important;
+}
+.gradient-bg,
+.gradient-bg2,
+.gradient-bg3 {
+    position: relative;
+}
+.gradient-bg::before,
+.gradient-bg2::before,
+.gradient-bg3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, var(--tg-primary-color) 0%, var(--tg-green) 47.60%, transparent 65.23%);
+    z-index: -1;
+    border-radius: 0px 0px 20px 20px;
+}
+.gradient-bg2::before {
+    transform: rotate(180deg);
+}
+.gradient-bg3::before {
+    background: linear-gradient(0deg, var(--tg-primary-color) 0%, var(--tg-green) 47.60%, transparent 91.23%);
+}
+.color-title span {
+    color: var(--tg-primary-color);
+}
+.map-height-100 {
+    height: 100% !important;
+}
+.map-height-100 .elementor-custom-embed {
+    height: 100%;
+}
+
+/* Elementor Responsive */
+@media (max-width: 1800px) {
+
+}
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px){
+
+}
+
+@media (max-width: 767.98px) {
+.gradient-bg,
+.gradient-bg2,
+.gradient-bg3 {
+    margin: 0 0;
+}
+
+}

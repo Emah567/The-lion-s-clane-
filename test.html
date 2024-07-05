@@ -1,0 +1,81 @@
+<form id="form">
+  <div class="field">
+    <label for="from_name">from_name</label>
+    <input type="text" name="from_name" id="from_name">
+  </div>
+ 
+  <div class="field">
+    <label for="from_email">from_email</label>
+    <input type="text" name="from_email" id="from_email">
+  </div>
+  <div class="field">
+    <label for="message">message</label>
+    <input type="text" name="message" id="message">
+  </div>
+  <div class="field">
+    <label for="reply_to">reply_to</label>
+    <input type="text" name="reply_to" id="reply_to">
+  </div>
+
+  <input type="submit" id="button" value="Send Email" >
+</form>
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('Ii52XhoejR3ZVgMDG')
+</script>
+<script>
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 6'default_service';
+   const templateID = 'template_6wij5dj';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});</script><head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Testimonial Slider</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="content-wrapper">
+		<h1>Our Reviews</h1>
+		<div class="blue-line"></div>
+		<div class="wrapper-for-arrows">
+			<div style="opacity: 0;" class="chicken"></div>
+			<div id="reviewWrap" class="review-wrap">
+				<div id="imgDiv" class="">
+				</div>
+				<div id="personName"></div>
+				<div id="profession"></div>
+				<div id="description">
+				</div>
+			</div>
+			<div id="surpriseMeBtn" class="surprise-me-btn">Surprise me</div>
+			<div class="left-arrow-wrap arrow-wrap">
+				<div class="arrow" id="leftArrow"></div>
+				
+				
+				
+				
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+	<script src="main.js"></script>
+</body>
